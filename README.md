@@ -19,44 +19,40 @@ Jupyter_Notebook_environment.txt contains all packages version of Jupyter Notebo
 - Python 3.8.0
 
 ## Dataset
-- Because of using pytorch to predict the image, imagefolder could be used to generate training and testing data.
-- Imagefolder needs the image be arranged in the folder according to their labels, so we need to classify the image with folders.
-1. Download the dataset from https://competitions.codalab.org/my/datasets/download/83f7141a-641e-4e32-8d0c-42b482457836.
-2. Create folder "data" .
-3. Create folder "images" in "data"put the training image into "training_images" folder.
-4. Create folder "training_images"、"training_labeled_images"、"testing_images"、"testing_labeled_images" in "images".
-5. Extract the training image into "training_images" folder.
-6. Extract the testing image into "testing_images" folder.
-7. Then run the "image_label_classification.ipynb" code will classify the image according to their labels.
-8. There are some examples of the folder in this porject above.
+- “Transfer_mat_To_csv.ipynb” which can transfer .mat file to .csv file. 
+- I transfer the file on google colab and save on the google drive , then download the csv file to my computer to train the model.
+1. Download the dataset from https://drive.google.com/drive/folders/1aRWnNvirWHXXXpPPfcWlHQuzGJdXagoc.
+2. Upload file "digitStruct.mat"、"Transfer_mat_To_csv.ipynb" to google drive in the same folder.
+3. Run the file "digitStruct.mat" you will get a "train_ann.csv" file.
+4. Download the file "train_ann.csv".
+5. Extract the "train.zip" and "test.zip" in the folder with "train_ann.csv".
+6. Training images will be put in "train" folder and testing images will be put in "test" folder.
 
 
 ## Training
-Upload the "310552017_Adjust_ResNet152.ipynb" and the classfied dataset file which is classify above to colab with google drive and running "310552017_Adjust_ResNet152.ipynb" file to train the model.
-
-Remember to replace the root of the image file with your root.
+- Download the files "VRDL_HW2_train.ipynb"、“utils.py”、“transforms.py”、“coco_eval.py”、“model_utils.py”、“engine.py”、“coco_utils.py” and put these files in the folder with - "train_ann.csv"
+- Run the files "VRDL_HW2_train.ipynb" will start to train the model and save it.
+- Remember to replace the root of the image file with your own root.
 
 The training parameters are:
 
-Model | learning rate | Image size | Training Epochs | Batch size | optimizer
------------- | ------------- | ------------- | ------------- | ------------- | -------------
-resnet152 | 0.001 | 224 | 15 | 32 | SGD
+Model | learning rate | Training Epochs | Batch size | optimizer
+------------------------ | ------------------------- | ------------------------- | ------------------------- | -------------------------
+FasterRCNN_resnet50_fpn | 0.005 | 5、10 | 4 | SGD
 
 ## testing
-Testing accuracy with 15 epochs could reach 63% after upload to codalab.
-
-Testing predition will be recorded in the answer.txt file.
+- "VRDL_HW2_train.ipynb" has the code that can use the model which is saved above to predict the testing images and save the prediction result as json files according to coco set rules.
 
 ### Pretrained models
-Pretrained resnet152 model which is provided by pytorch.
+Pretrained model "fasterrcnn_resnet50_fpn" which is provided by torchvision.
 
 ### Link of my trained model
-https://drive.google.com/file/d/1iCOjVgxlylJZvYKv4O_5bALpdgkBAQ7_/view?usp=sharing
+////https://drive.google.com/file/d/1iCOjVgxlylJZvYKv4O_5bALpdgkBAQ7_/view?usp=sharing
 
 ### Inference
 
 Load the trained model parameters without retraining again.
 
-"Adjust_resnet152.pth" needs to be upload into google drive according to your root.
+".pth" needs to be download to your own device and run "VRDL_HW2_train.ipynb" you will get the results as json file.
 
-Then run the code of "inference.py" could get the "answer.txt" which contains the result of my model.
+"Inference.ipynb" just has the code about calculating the running time of the model and "Inference.ipynb" and the model need to be upload to google colab to run so that it can has the same hard device.
