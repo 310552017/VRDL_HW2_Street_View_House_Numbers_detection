@@ -40,7 +40,7 @@ Model | learning rate | Training Epochs | Batch size | optimizer
 ------------------------ | ------------------------- | ------------------------- | ------------------------- | -------------------------
 FasterRCNN_resnet50_fpn | 0.005 | 5、10 | 4 | SGD
 
-## testing
+## Testing
 - "VRDL_HW2_train.ipynb" has the code that can use the model which is saved above to predict the testing images and save the prediction result as json files according to coco set rules.
 
 ### Pretrained models
