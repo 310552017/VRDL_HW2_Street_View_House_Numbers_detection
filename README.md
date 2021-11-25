@@ -57,7 +57,7 @@ Pretrained model "fasterrcnn_resnet50_fpn" which is provided by torchvision.
 
 Load the trained model parameters without retraining again.
 
-".pth" needs to be download to your own device and run "VRDL_HW2_train.ipynb" you will get the results as json file.
+“utils.py”、“transforms.py”、“coco_eval.py”、“model_utils.py”、“engine.py”、“coco_utils.py” and ".pth" need to be download to your own device and run "VRDL_HW2_train.ipynb" you will get the results as json file.
 
 "Inference.ipynb" just has the code about calculating the running time of the model.
 
