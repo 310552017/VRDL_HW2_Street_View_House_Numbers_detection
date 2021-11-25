@@ -51,6 +51,7 @@ Pretrained model "fasterrcnn_resnet50_fpn" which is provided by torchvision.
 - The model which training with 10 epoch：https://drive.google.com/file/d/1UrexXo2LfPu2Cl40yw-wW9iS8TALiIav/view?usp=sharing
 - "train_ann.csv"：https://drive.google.com/file/d/1pgypeO_P9SmXS_xeP46cya-iAexbk3Q2/view?usp=sharing
 - File for Evaluating the prediction time "inference.ipynb"：https://colab.research.google.com/drive/1j0IslEBNBqeXtdXvu0Irp7AIsJG_HlMA?usp=sharing
+- Note：“utils.py”、“transforms.py”、“coco_eval.py”、“model_utils.py”、“engine.py”、“coco_utils.py” and "model.pth" files are need to be uploaded to google drive.
 
 ### Inference
 
