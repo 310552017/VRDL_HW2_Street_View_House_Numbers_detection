@@ -16,7 +16,7 @@ To reproduct the testing prediction, please follow the steps below:
 
 ## Environment
 Jupyter_Notebook_environment.txt contains all packages version of Jupyter Notebook
-- Python 3.8.0
+- notebook 6.4.6
 
 ## Dataset
 - “Transfer_mat_To_csv.ipynb” which can transfer .mat file to .csv file. 
@@ -59,4 +59,6 @@ Load the trained model parameters without retraining again.
 
 ".pth" needs to be download to your own device and run "VRDL_HW2_train.ipynb" you will get the results as json file.
 
-"Inference.ipynb" just has the code about calculating the running time of the model and "Inference.ipynb" and the model need to be upload to google colab to run so that it can has the same hard device.
+"Inference.ipynb" just has the code about calculating the running time of the model.
+
+"Inference.ipynb" and the model need to be upload to google colab to run so that it can has the same hard device performance.
